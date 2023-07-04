@@ -17,3 +17,12 @@ describe('Gilded Rose', () => {
     expect(items[0].quality).toBe(6);
   });
 });
+describe('Gilded Rose',() =>{
+  it('quality should be positive', () => {
+    const gildedRose = new GildedRose([new Item('foo', 0,0)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toBe(0);
+  });
+});
+
+
