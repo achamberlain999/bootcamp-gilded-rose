@@ -23,7 +23,7 @@ export class GildedRose {
       let deg = 1;
       if (this.items[i].name == "Aged Brie") {
         deg *= -1;
-      } else if (this.items[i].name.includes("Backstage Passes")) {
+      } else if (this.items[i].name.includes("Backstage passes")) {
         deg = -1;
         if (this.items[i].sellIn <= 10) {
           deg--;
@@ -33,6 +33,7 @@ export class GildedRose {
         }
         if (this.items[i].sellIn <= 0) {
           deg = 0;
+          this.items[i].quality = 0;
         }
       } else if (this.items[i].name.includes("Sulfuras")) {
         deg = 0;
